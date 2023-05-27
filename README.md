@@ -30,4 +30,4 @@ Please email all questions to:
 
 # Demo
 
-Watch a video demo here: 
+Watch a video demo here: https://watch.screencastify.com/v/DyiKMSmklwa5jr4NBkZl
