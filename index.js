@@ -33,32 +33,26 @@ async function generateLogo() {
     const { text, textColor, shape, shapeColor } = answers;
     // Create the corresponding shape object based on user choice
     let logoShape;
-    switch (shape) {
-      case 'Triangle':
-        logoShape = new Triangle(shapeColor);
-        break;
-      case 'Square':
-        logoShape = new Square(shapeColor);
-        break;
-      case 'Circle':
-        logoShape = new Circle(shapeColor);
-        break;
-      default:
-        throw new Error('Invalid shape choice.');
+    if (shape === 'Triangle') {
+      logoShape = new Triangle(shapeColor);
+    } else if (shape === 'Square') {
+      logoShape = new Square(shapeColor);
+    } else if (shape === 'Circle') {
+      logoShape = new Circle(shapeColor);
+    } else {
+      throw new Error('Invalid shape choice.');
     }
     // Generate the SVG logo
-    const svgContent = `<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    const svgContent = `
+    <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
       ${logoShape.render()}
-      <text x="200" y="200" dominant-baseline="middle" text-anchor="middle" style="fill:${textColor};">${text}</text>
-    </svg>`;
+      <text x="150" y="100" dominant-baseline="middle" text-anchor="middle" style="fill:${textColor};">${text}</text>
+    </svg>
+    `;
     // Save the SVG file
     const filename = 'logo.svg';
-    fs.writeFile(filename, svgContent, (err) => {
-      if (err) {
-        throw err;
-      }
-      console.log('Logo saved successfully as', filename);
-    });
+    fs.writeFileSync(filename, svgContent);
+    console.log('Logo saved successfully as', filename);
   } catch (error) {
     console.error('Error generating logo:', error);
   }

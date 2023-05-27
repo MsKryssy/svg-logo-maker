@@ -1,0 +1,6 @@
+
+    <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="150" cy="100" r="100" style="fill:Yellow" />
+      <text x="150" y="100" dominant-baseline="middle" text-anchor="middle" style="fill:Orange;">YES</text>
+    </svg>
+    

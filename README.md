@@ -4,7 +4,7 @@ Builds an SVG logo by choosing the color, size, shape, and any text to go along 
 
 # Table of Contents
 
-[!Description](#description) | [!Installation](#installation) | [!Usage](#usage) | [!License](#license) | [!Contact](#contact) | [Demo](#demo)
+[Description](#description) | [Installation](#installation) | [Usage](#usage) | [License](#license) | [Contact](#contact) | [Demo](#demo)
 
 # Description
 
@@ -12,7 +12,11 @@ Creating a SVG Logo Maker that will allow you to create logos based on the color
 
 # Installation
 
+Install the Inquirer and Jest by running "npm i inquirer" in the integrated terminal. Be sure to install the correct versions for the correct dependencies.
+
 # Usage
+
+This can be used to generate a simplified SVG logo and can be edited afterwards.
 
 # License
 
